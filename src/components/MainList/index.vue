@@ -51,7 +51,7 @@ export default {
       ListData[type] && (this.ListData[type]["ref"] = true);
       const {
         data: { success, data },
-      } = await axios.get("https://api.vvhan.com/api/hotlist", {
+      } = await axios.get("https://api.vvhan.com/api/hotlist/all", {
         params: { type },
       });
       if (!success) return this.$notify.error({ title: "Error", offset: 100, message: "数据请求失败" });
